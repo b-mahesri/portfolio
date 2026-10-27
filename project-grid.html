@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- user-scalable=no removed so visitors can pinch-zoom -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project grid sketch</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1f2430;
+    --muted: #5a6172;
+    --line: #d9dce3;
+    --accent: #2f5d8a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161a22;
+      --text: #e8eaf0;
+      --muted: #a3a9b8;
+      --line: #343a48;
+      --accent: #8ab4e0;
+    }
+  }
+  body {
+    margin: 0;
+    padding: 2rem 1.25rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.5;
+  }
+  main { max-width: 64rem; margin: 0 auto; }
+  h1 { font-size: 1.9rem; margin: 0 0 .25rem; }
+  .pitch { color: var(--muted); margin: 0 0 1.5rem; max-width: 40rem; }
+  h2 { font-size: 1.3rem; margin: 2.5rem 0 .25rem; }
+  .note { color: var(--muted); font-size: .9rem; margin: 0 0 1.25rem; max-width: 42rem; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 1.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .card {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card img {
+    width: 100%;
+    height: 11rem;
+    object-fit: cover;
+    display: block;
+    background: var(--line);
+  }
+  .card-body { padding: 1rem; display: flex; flex-direction: column; gap: .5rem; flex: 1; }
+  .card h3 { margin: 0; font-size: 1.1rem; }
+  .kind { margin: 0; font-size: .85rem; color: var(--muted); }
+  .outcome { margin: 0; }
+
+  .tags { list-style: none; padding: 0; margin: auto 0 0; display: flex; flex-wrap: wrap; gap: .35rem; }
+  .tags li {
+    font-size: .78rem;
+    padding: .15em .65em;
+    border: 1px solid var(--line);
+    border-radius: 1em;
+    color: var(--muted);
+  }
+  .card a.more { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .card a.more:hover, .card a.more:focus-visible { text-decoration: underline; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<main>
+
+  <h1>Batool Mahesri</h1>
+  <p class="pitch">Software engineer (University of Michigan, B.S. CS). I build full-stack apps, ML models, and games.</p>
+
+  <h2>Selected work</h2>
+  <p class="note">Source code for most coursework is private under the University of Michigan honor code. I'm happy to walk through any project in an interview.</p>
+
+  <ul class="grid">
+
+    <!-- 1. Internship first: it's your only professional work -->
+    <li class="card">
+      <a href="gmspazio.html" tabindex="-1" aria-hidden="true">
+        <img src="images/gmspazio_srl_logo.jpeg" alt="GMSpazio logo">
+      </a>
+      <div class="card-body">
+        <h3>Shield Master UI redesign</h3>
+        <p class="kind">Internship, GMSpazio</p>
+        <p class="outcome">Redesigned and reimplemented the UI of a defense systems evaluation tool. [Add: what improved, who used it.]</p>
+        <ul class="tags" aria-label="Technologies">
+          <li>C#</li><li>UI/UX</li><li>[add stack]</li>
+        </ul>
+        <a class="more" href="gmspazio.html">Read the case study</a>
+      </div>
+    </li>
+
+    <li class="card">
+      <a href="ShadowLab.html" tabindex="-1" aria-hidden="true">
+        <img src="images/shadow-lab-thumbnail.jpg" alt="Title screen of Shadow Lab">
+      </a>
+      <div class="card-body">
+        <h3>Shadow Lab</h3>
+        <p class="kind">Game capstone, team of 4</p>
+        <p class="outcome">Designed and shipped an original game in 6 weeks. [Add: your role, one playtest finding you acted on.]</p>
+        <ul class="tags" aria-label="Technologies">
+          <li>Unity</li><li>C#</li><li>Agile</li><li>User testing</li>
+        </ul>
+        <a class="more" href="ShadowLab.html">Read the case study</a>
+      </div>
+    </li>
+
+    <li class="card">
+      <a href="webSystems.html" tabindex="-1" aria-hidden="true">
+        <img src="images/eecs485logo.png" alt="EECS 485 Web Systems course logo">
+      </a>
+      <div class="card-body">
+        <h3>Full-stack and distributed systems projects</h3>
+        <p class="kind">Web Systems coursework</p>
+        <p class="outcome">Built full-stack apps and a fault-tolerant distributed system. [Add: scale or a concrete result.]</p>
+        <ul class="tags" aria-label="Technologies">
+          <li>Python</li><li>Flask</li><li>React</li><li>SQL</li><li>REST APIs</li>
+        </ul>
+        <a class="more" href="webSystems.html">Read the case study</a>
+      </div>
+    </li>
+
+    <li class="card">
+      <a href="machineLearning.html" tabindex="-1" aria-hidden="true">
+        <img src="images/ml_logo.png" alt="Machine learning course logo">
+      </a>
+      <div class="card-body">
+        <h3>Classifiers and convolutional neural nets</h3>
+        <p class="kind">Machine Learning coursework</p>
+        <p class="outcome">Implemented and trained binary classifiers and CNNs. [Add: accuracy numbers, dataset.]</p>
+        <ul class="tags" aria-label="Technologies">
+          <li>Python</li><li>PyTorch</li><li>CNNs</li>
+        </ul>
+        <a class="more" href="machineLearning.html">Read the case study</a>
+      </div>
+    </li>
+
+    <li class="card">
+      <a href="Metroid.html" tabindex="-1" aria-hidden="true">
+        <img src="images/metroid.jpg" alt="Screenshot of the Metroid reimplementation">
+      </a>
+      <div class="card-body">
+        <h3>Metroid NES reimplementation</h3>
+        <p class="kind">Game development coursework</p>
+        <p class="outcome">Rebuilt the first region of the 1986 game, plus a custom level built around a new mechanic.</p>
+        <ul class="tags" aria-label="Technologies">
+          <li>Unity</li><li>C#</li><li>Level design</li>
+        </ul>
+        <a class="more" href="Metroid.html">Read the case study</a>
+      </div>
+    </li>
+
+    <li class="card">
+      <a href="BrideOfKarsaz.html" tabindex="-1" aria-hidden="true">
+        <img src="images/karsaz.jpg" alt="Screenshot of Bride of Karsaz">
+      </a>
+      <div class="card-body">
+        <h3>Bride of Karsaz</h3>
+        <p class="kind">Original game prototype</p>
+        <p class="outcome">Prototyped an original game inspired by Karachi. [Add: one line on the mechanic or story.]</p>
+        <ul class="tags" aria-label="Technologies">
+          <li>Unity</li><li>C#</li><li>Rapid prototyping</li>
+        </ul>
+        <a class="more" href="BrideOfKarsaz.html">Read the case study</a>
+      </div>
+    </li>
+
+  </ul>
+</main>
+</body>
+</html>
