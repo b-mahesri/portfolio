@@ -3,10 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shield Master: UI Redesign | Batool Mahesri</title>
-<meta name="description" content="Software Development Internship @ GMSpazio.">
+<title>GMSpazio Internship | Batool Mahesri</title>
+<meta name="description" content="Rebuilt the UI for four workflows in Shield Master's Missile Designer Module (MDM) during an 8-week software development internship.">
 <style>
-  /* Same tokens and tag style as project-grid.html */
   :root {
     --bg: #ffffff;
     --text: #1f2430;
@@ -39,7 +38,6 @@
   h1 { font-size: 2rem; margin: 0 0 .25rem; line-height: 1.2; }
   .summary { color: var(--muted); font-size: 1.1rem; margin: 0 0 1.5rem; }
 
-  /* Quick facts */
   .facts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
@@ -52,7 +50,6 @@
   .facts dt { font-size: .85rem; color: var(--muted); }
   .facts dd { margin: 0; font-weight: 600; }
 
-  /* Tags (same as grid) */
   .tags { list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-wrap: wrap; gap: .35rem; }
   .tags li {
     font-size: .78rem;
@@ -63,13 +60,13 @@
   }
 
   h2 { font-size: 1.35rem; margin: 2.5rem 0 .5rem; }
+  h3 { font-size: 1.05rem; margin: 1.5rem 0 .25rem; }
   p { margin: 0 0 1rem; }
   ul.points { padding-left: 1.2rem; margin: 0 0 1rem; }
   ul.points li { margin-bottom: .35rem; }
 
-  /* Media */
   figure { margin: 1.5rem 0; }
-  figure img, figure video {
+  figure img {
     width: 100%;
     height: auto;
     display: block;
@@ -78,13 +75,6 @@
     background: var(--line);
   }
   figcaption { font-size: .9rem; color: var(--muted); margin-top: .4rem; }
-
-  /* Two images side by side, stacking on phones */
-  .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
-  .pair figure { margin: 0; }
-
-  details { border: 1px solid var(--line); border-radius: 6px; padding: .75rem 1rem; margin: 1rem 0; }
-  summary { cursor: pointer; font-weight: 600; }
 
   .next { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
   .note { color: var(--muted); font-size: .9rem; }
@@ -95,76 +85,84 @@
 
   <a class="back" href="index.html#projects">Back to all projects</a>
 
-  <h1>Shield Master: UI Redesign</h1>
-  <p class="summary">Software Development Internship @ GMSpazio.</p>
+  <h1>Shield Master UI Redesign</h1>
+  <p class="summary">Rebuilt the UI for four workflows in Shield Master's Missile Designer Module (MDM) during an 8-week software development internship.</p>
 
-  <!-- Quick facts -->
   <dl class="facts">
-    <div><dt>Role</dt><dd>SD Intern</dd></div>
-    <div><dt>Company</dt><dd>GMSpazio</dd></div>
-    <div><dt>Duration</dt><dd>May - July 2024</dd></div>
-    <div><dt>Location</dt><dd>Rome, Italy</dd></div>
+    <div><dt>Company</dt><dd>GMSpazio, Rome, Italy</dd></div>
+    <div><dt>Role</dt><dd>Software Development Intern</dd></div>
+    <div><dt>Duration</dt><dd>8 weeks, 20 hours/week</dd></div>
+    <div><dt>When</dt><dd>Summer 2024</dd></div>
   </dl>
 
   <ul class="tags" aria-label="Technologies">
-    <li>C#</li><li>WinForms</li><li>UI/UX</li>
+    <li>C#</li><li>WinForms</li><li>Bunifu</li><li>UI Design</li><li>Wireframing</li>
   </ul>
 
-  <!-- Hero media: a short gameplay video works best here -->
+  <h2>Context</h2>
+  <p><a href="https://www.gmspazio.com/en/">GMSpazio</a> is an aerospace and defence software company based in Rome. <a href="https://www.gmspazio.com/en/project-items/shield-master-missile-defense-tool-kit/">Shield Master</a> is their toolkit for analyzing missile defense scenarios and evaluating how defensive systems perform against incoming missile threats.</p>
+  <p>The first module in the Shield Master workflow is the Missile Designer Module (MDM), where users define and manage threat and interceptor databases. Its UI was being updated, and the update had been outsourced. The team was not happy with the result because of design and usability problems, so my job was to rebuild it from scratch.</p>
+  <p>Interns at GMSpazio usually work on research projects. That summer the team needed this UI finished, and my background in C# and game development was a good fit, so I took it on.</p>
+
   <figure>
-    <video controls preload="metadata" poster="images/shadow-lab-thumbnail.jpg">
-      <source src="videos/shadow-lab-gameplay.mp4" type="video/mp4">
-      <!-- Optional captions file if the video has speech or key on-screen text:
-      <track kind="captions" src="videos/shadow-lab-gameplay.vtt" srclang="en" label="English"> -->
-      Your browser can't play this video. <a href="videos/shadow-lab-gameplay.mp4">Download it instead</a>.
-    </video>
-    <figcaption>60 seconds of gameplay. [Say what the viewer should watch for.]</figcaption>
+    <img src="images/gmspazio_linkedin.jpeg" alt="Screenshot of the Shield Master interface from GMSpazio's LinkedIn article">
+    <figcaption>Shield Master. Image from GMSpazio's <a href="https://www.linkedin.com/pulse/enhancing-missile-defense-through-simulation-strategic-analysis-yitpf/">LinkedIn article</a>.</figcaption>
   </figure>
 
-  <h2>Overview</h2>
-  <p>[Two or three sentences: what the game is, who it's for, and what the assignment was. Someone skimming only this section should understand the project.]</p>
-
   <h2>My role</h2>
+  <p>I owned both the design and the implementation of the MDM UI. That covered the colour scheme, button design, visuals, and workflow, plus the code. The MDM lets users define a scenario, a threat missile, a defence network, and an interceptor, so I redesigned and reimplemented four workflows.</p>
+  <p>The outsourced UI was based on the original Shield Master UI, so I wasn't starting from nothing. The goal was a more polished version that people who used the old UI would still recognize.</p>
   <ul class="points">
-    <li>[Specific thing you built or owned, e.g. the enemy AI state machine]</li>
-    <li>[Another concrete contribution]</li>
-    <li>[Something you did beyond code: facilitation, playtesting, art direction]</li>
+    <li>Day to day, I worked with a junior systems engineer, who answered my questions and gave feedback.</li>
+    <li>The Head of Engineering supervised the overall work. He set what I worked on and my timelines, and judged whether the work was up to standard at the end.</li>
   </ul>
+  <p>When I started, the outsourced UI had inconsistent spacing, sizing, and formatting from tab to tab within a single workflow.</p>
 
   <h2>Process</h2>
-  <p>[Describe how the project moved from idea to finished game: sprints, key decisions, and what you changed along the way. Focus on one or two decisions that had real tradeoffs.]</p>
 
-  <div class="pair">
-    <figure>
-      <img src="images/shadow-lab-early.jpg" alt="Early prototype of Shadow Lab with placeholder art" loading="lazy">
-      <figcaption>Week 1 prototype.</figcaption>
-    </figure>
-    <figure>
-      <img src="images/shadow-lab-final.jpg" alt="Final version of Shadow Lab with finished art and interface" loading="lazy">
-      <figcaption>Final build.</figcaption>
-    </figure>
-  </div>
+  <h3>Timeline</h3>
+  <ul class="points">
+    <li><strong>Week 1:</strong> Study the old UI and identify the problems.</li>
+    <li><strong>Weeks 2 to 5:</strong> Sketch and wireframe the workflows, then prototype and test components.</li>
+    <li><strong>Weeks 6 to 7:</strong> Implement all UI components and workflows.</li>
+    <li><strong>Week 8:</strong> Assemble the UI across the four MDM workflows.</li>
+  </ul>
+
+  <h3>Learning the system</h3>
+  <p>I had the original Shield Master available, so I walked through it several times to see what it did and how it was supposed to work, and read the code to see how it was built. I also went through the outsourced UI with the junior engineer to understand what the team disliked about it. I was new to UI design, so those conversations also taught me the basics of what to consider when building one.</p>
+
+  <h3>What was wrong with the outsourced UI</h3>
+  <p>The colour scheme was unappealing, and the workflows weren't smooth. One workflow went through several tabs in a row, and each tab was inconsistent. The Next button moved around from tab to tab, and buttons sitting side by side were different sizes and weren't aligned or evenly spaced.</p>
+
+  <h3>Decision 1: Keep the layout familiar, or redesign completely?</h3>
+  <p>A complete redesign would have let me make something more visually striking. But Shield Master was already in use, and a new layout would have meant users had to relearn the tool. The module's job was fairly simple, so it didn't need a flashy interface. It needed clean, intuitive workflows and components. I treated the work as an iteration on the old design instead. It also suited where I was in my skills, since the old UI gave me something to learn from.</p>
+
+  <h3>Decision 2: Built-in Bunifu components, or custom ones?</h3>
+  <p>Bunifu is a UI library built on top of WinForms. Its built-in components were the simpler option because they didn't need extra code or testing, but they have limitations and aren't meant for very dynamic interfaces. Custom components took more work and still had limits, but they let me build something that looked better and was easier to use. I chose custom components. The result wasn't dramatic, but a lot of the improvement came from small details.</p>
+
+  <figure>
+    <img src="images/gmspazio-wireframe" alt="Wireframe of an increment and decrement button control">
+    <figcaption>A wireframe similar to my original hand-drawn sketch of the increment/decrement buttons, showing how this decision applied to a specific component.</figcaption>
+  </figure>
+
+  <h3>Feedback</h3>
+  <p>I met weekly with the junior engineer and the Head of Engineering. We went over the past week's work, looked at the options I had, decided which to go with, talked through implementation ideas, and cleared up requirements. Each meeting also set the plan for the next week. For example, I once made wireframes for one tab with three different button designs, and in the review we picked the one to finalize.</p>
 
   <h2>Results</h2>
   <ul class="points">
-    <li>[Outcome, ideally with a number: playtesters, completion rate, grade, feedback]</li>
-    <li>[What shipped]</li>
-    <li>[A change you made because of user feedback]</li>
+    <li>My colleagues extended the MDM UI to the other Shield Master modules after my internship ended, and it shipped in late 2024.</li>
+    <li>A few months later, a colleague told me it was also being used as a UI template for another GMSpazio product.</li>
+    <li>I took on a task the team needed done, which helped keep the project on schedule and took some load off my colleagues.</li>
   </ul>
 
   <h2>Reflection</h2>
-  <p>[What you'd do differently, and what you took away. Be specific. "I'd have set up version control conventions in week one after merge conflicts cost us a day" beats "I learned to communicate."]</p>
+  <p>There was a learning curve, first in how to design a UI and make design decisions, and then in understanding what the framework could and couldn't do. In coursework, someone has usually already worked out the difficult parts and given you guides and resources. Here I had a lot of ownership, and colleagues were often busy, so I had to do much of the research myself. That could be discouraging at times, but I learned to stick with it and be patient when something took longer than expected. Once I reached a reasonable level of proficiency, things moved faster and I worked with more confidence.</p>
 
-  <details>
-    <summary>Technical details</summary>
-    <p>[Optional deeper dive for engineers: architecture, a tricky bug, a design pattern you used. Collapsed by default so it doesn't slow down other readers.]</p>
-  </details>
-
-  <p class="note">Source code is private under the University of Michigan honor code. I'm happy to walk through it in an interview.</p>
+  <p class="note">The company's source code and internal materials are not shared here. This page is limited to publicly available information about the product and my own work.</p>
 
   <nav class="next" aria-label="Project navigation">
-    <a href="Metroid.html">Previous: Metroid NES reimplementation</a>
-    <a href="webSystems.html">Next: Web Systems</a>
+    <span></span>
+    <a href="ShadowLab.html">Next: Shadow Lab</a>
   </nav>
 
 </main>
