@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shield Master: UI Redesign | Batool Mahesri</title>
+<meta name="description" content="Software Development Internship @ GMSpazio.">
+<style>
+  /* Same tokens and tag style as project-grid.html */
+  :root {
+    --bg: #ffffff;
+    --text: #1f2430;
+    --muted: #5a6172;
+    --line: #d9dce3;
+    --accent: #2f5d8a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161a22;
+      --text: #e8eaf0;
+      --muted: #a3a9b8;
+      --line: #343a48;
+      --accent: #8ab4e0;
+    }
+  }
+  body {
+    margin: 0;
+    padding: 2rem 1.25rem 4rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.6;
+  }
+  main { max-width: 46rem; margin: 0 auto; }
+  a { color: var(--accent); }
+  a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 
+  .back { display: inline-block; margin-bottom: 1.5rem; font-size: .95rem; }
+  h1 { font-size: 2rem; margin: 0 0 .25rem; line-height: 1.2; }
+  .summary { color: var(--muted); font-size: 1.1rem; margin: 0 0 1.5rem; }
+
+  /* Quick facts */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1rem;
+    margin: 0 0 1.5rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .facts dt { font-size: .85rem; color: var(--muted); }
+  .facts dd { margin: 0; font-weight: 600; }
+
+  /* Tags (same as grid) */
+  .tags { list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-wrap: wrap; gap: .35rem; }
+  .tags li {
+    font-size: .78rem;
+    padding: .15em .65em;
+    border: 1px solid var(--line);
+    border-radius: 1em;
+    color: var(--muted);
+  }
+
+  h2 { font-size: 1.35rem; margin: 2.5rem 0 .5rem; }
+  p { margin: 0 0 1rem; }
+  ul.points { padding-left: 1.2rem; margin: 0 0 1rem; }
+  ul.points li { margin-bottom: .35rem; }
+
+  /* Media */
+  figure { margin: 1.5rem 0; }
+  figure img, figure video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: var(--line);
+  }
+  figcaption { font-size: .9rem; color: var(--muted); margin-top: .4rem; }
+
+  /* Two images side by side, stacking on phones */
+  .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; }
+  .pair figure { margin: 0; }
+
+  details { border: 1px solid var(--line); border-radius: 6px; padding: .75rem 1rem; margin: 1rem 0; }
+  summary { cursor: pointer; font-weight: 600; }
+
+  .next { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .note { color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+
+  <a class="back" href="index.html#projects">Back to all projects</a>
+
+  <h1>Shield Master: UI Redesign</h1>
+  <p class="summary">Software Development Internship @ GMSpazio.</p>
+
+  <!-- Quick facts -->
+  <dl class="facts">
+    <div><dt>Role</dt><dd>Software Development Intern</dd></div>
+    <div><dt>Company</dt><dd>GMSpazio</dd></div>
+    <div><dt>Duration</dt><dd>May - July 2024 (8 weeks)</dd></div>
+  </dl>
+
+  <ul class="tags" aria-label="Technologies">
+    <li>C#</li><li>WinForms</li><li>UI/UX</li>
+  </ul>
+
+  <!-- Hero media: a short gameplay video works best here -->
+  <figure>
+    <video controls preload="metadata" poster="images/shadow-lab-thumbnail.jpg">
+      <source src="videos/shadow-lab-gameplay.mp4" type="video/mp4">
+      <!-- Optional captions file if the video has speech or key on-screen text:
+      <track kind="captions" src="videos/shadow-lab-gameplay.vtt" srclang="en" label="English"> -->
+      Your browser can't play this video. <a href="videos/shadow-lab-gameplay.mp4">Download it instead</a>.
+    </video>
+    <figcaption>60 seconds of gameplay. [Say what the viewer should watch for.]</figcaption>
+  </figure>
+
+  <h2>Overview</h2>
+  <p>[Two or three sentences: what the game is, who it's for, and what the assignment was. Someone skimming only this section should understand the project.]</p>
+
+  <h2>My role</h2>
+  <ul class="points">
+    <li>[Specific thing you built or owned, e.g. the enemy AI state machine]</li>
+    <li>[Another concrete contribution]</li>
+    <li>[Something you did beyond code: facilitation, playtesting, art direction]</li>
+  </ul>
+
+  <h2>Process</h2>
+  <p>[Describe how the project moved from idea to finished game: sprints, key decisions, and what you changed along the way. Focus on one or two decisions that had real tradeoffs.]</p>
+
+  <div class="pair">
+    <figure>
+      <img src="images/shadow-lab-early.jpg" alt="Early prototype of Shadow Lab with placeholder art" loading="lazy">
+      <figcaption>Week 1 prototype.</figcaption>
+    </figure>
+    <figure>
+      <img src="images/shadow-lab-final.jpg" alt="Final version of Shadow Lab with finished art and interface" loading="lazy">
+      <figcaption>Final build.</figcaption>
+    </figure>
+  </div>
+
+  <h2>Results</h2>
+  <ul class="points">
+    <li>[Outcome, ideally with a number: playtesters, completion rate, grade, feedback]</li>
+    <li>[What shipped]</li>
+    <li>[A change you made because of user feedback]</li>
+  </ul>
+
+  <h2>Reflection</h2>
+  <p>[What you'd do differently, and what you took away. Be specific. "I'd have set up version control conventions in week one after merge conflicts cost us a day" beats "I learned to communicate."]</p>
+
+  <details>
+    <summary>Technical details</summary>
+    <p>[Optional deeper dive for engineers: architecture, a tricky bug, a design pattern you used. Collapsed by default so it doesn't slow down other readers.]</p>
+  </details>
+
+  <p class="note">Source code is private under the University of Michigan honor code. I'm happy to walk through it in an interview.</p>
+
+  <nav class="next" aria-label="Project navigation">
+    <a href="Metroid.html">Previous: Metroid NES reimplementation</a>
+    <a href="webSystems.html">Next: Web Systems</a>
+  </nav>
+
+</main>
+</body>
+</html>
