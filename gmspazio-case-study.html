@@ -5,29 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GMSpazio Internship | Batool Mahesri</title>
 <meta name="description" content="Rebuilt the UI for four workflows in Shield Master's Missile Designer Module (MDM) during an 8-week software development internship.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #ffffff;
-    --text: #1f2430;
-    --muted: #5a6172;
-    --line: #d9dce3;
-    --accent: #2f5d8a;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #161a22;
-      --text: #e8eaf0;
-      --muted: #a3a9b8;
-      --line: #343a48;
-      --accent: #8ab4e0;
-    }
+    --bg: #fff600;          /* cadmium yellow page background */
+    --text: #000000;
+    --muted: #262626;
+    --line: #000000;        /* borders and rules, black so they show on yellow */
+    --accent: #000000;      /* links */
   }
   body {
     margin: 0;
     padding: 2rem 1.25rem 4rem;
     background: var(--bg);
     color: var(--text);
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family: "Jost", "Futura", system-ui, -apple-system, "Segoe UI", sans-serif;
     line-height: 1.6;
   }
   main { max-width: 46rem; margin: 0 auto; }
@@ -72,7 +66,7 @@
     display: block;
     border: 1px solid var(--line);
     border-radius: 6px;
-    background: var(--line);
+    background: rgba(0, 0, 0, .12);
   }
   figcaption { font-size: .9rem; color: var(--muted); margin-top: .4rem; }
 
