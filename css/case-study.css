@@ -1,0 +1,103 @@
+/* case-study.css
+   Case study pages only. Load after base.css.
+
+   Each page can restyle itself from its own <body> tag with these variables:
+     --bg, --text, --muted, --line, --accent   page colours (defined in base.css)
+     --title-font      font for the page title (h1)
+     --title-size      size of the page title
+     --title-weight    weight of the page title (use 400 for pixel fonts)
+   Optional, only for pages with a play/launch button:
+     --button-fill, --button-text, --button-font
+   Example:
+     <body style="--bg:#b9bfc3; --text:#f83800; --muted:#f83800; --line:#f83800; --accent:#f83800;
+                  --title-font:'Press Start 2P', monospace; --title-size:1.35rem; --title-weight:400;">
+   Anything you leave out falls back to the defaults below. */
+
+body {
+  /* Defaults, override per page with an inline style on <body> */
+  --title-size: 2rem;
+  --title-weight: 700;
+}
+
+main { max-width: 46rem; }
+
+.back { display: inline-block; margin-bottom: 1.5rem; font-size: .95rem; }
+
+h1 {
+  font-family: var(--title-font, inherit);
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  line-height: 1.4;
+  margin: 0 0 .5rem;
+}
+.summary { color: var(--muted); font-size: 1.1rem; margin: 0 0 1.5rem; }
+
+/* Quick facts row */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.facts dt { font-size: .85rem; color: var(--muted); }
+.facts dd { margin: 0; font-weight: 600; }
+
+/* Technologies */
+.tags { list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-wrap: wrap; gap: .35rem; }
+.tags li {
+  font-size: .78rem;
+  padding: .15em .65em;
+  border: 1px solid var(--line);
+  border-radius: 1em;
+  color: var(--muted);
+}
+
+/* Body content */
+h2 { font-size: 1.35rem; margin: 2.5rem 0 .5rem; }
+h3 { font-size: 1.05rem; margin: 1.5rem 0 .25rem; }
+ul.points { padding-left: 1.2rem; margin: 0 0 1rem; }
+ul.points li { margin-bottom: .35rem; }
+
+/* Images and videos */
+figure { margin: 1.5rem 0; }
+figure img, figure video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(0, 0, 0, .12);
+}
+figcaption { font-size: .9rem; color: var(--muted); margin-top: .4rem; }
+
+/* Optional play / launch button */
+.button {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 1rem;
+  padding: .9em 1.4em;
+  background: var(--button-fill, var(--text));   /* default: the page's text colour */
+  color: var(--button-text, var(--bg));          /* default: the page's background colour */
+  border: 3px solid var(--button-fill, var(--text));
+  font-family: var(--button-font, var(--title-font, inherit));   /* default: same as the title */
+  font-size: .85rem;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+}
+.button:hover { text-decoration: underline; }
+
+/* Notes and page navigation */
+.note { color: var(--muted); font-size: .9rem; }
+.next {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
