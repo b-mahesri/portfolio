@@ -6,86 +6,11 @@
 <title>Batool Mahesri</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/grid.css">
 <style>
-  :root {
-    --bg: #ffffe4;          /* off white page background */
-    --page-text: #000000;   /* text sitting directly on the page background */
-    --page-muted: #262626;
-    --card: #ffffe4;        /* off white */
-    --ink: #000000;         /* all text and borders on the cards */
-  }
-  body {
-    margin: 0;
-    padding: 2rem 1.25rem;
-    background: var(--bg);
-    color: var(--page-text);
-    font-family: "Jost", "Futura", system-ui, -apple-system, "Segoe UI", sans-serif;
-    line-height: 1.5;
-  }
-  main { max-width: 52rem; margin: 0 auto; }
-  h1 { font-size: 1.9rem; margin: 0 0 .25rem; }
-  .pitch { color: var(--page-muted); margin: 0 0 1.5rem; max-width: 40rem; }
-  h2 { font-size: 1.3rem; margin: 2.5rem 0 .25rem; }
-  .note { color: var(--page-muted); font-size: .9rem; margin: 0 0 1.25rem; max-width: 42rem; }
-
-  /* One card per row */
-  .grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .card {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    gap: 1.25rem;
-    padding: 1rem;              /* space between card border and image */
-    background: var(--card);
-    color: var(--ink);
-    border: 2px solid var(--ink);
-    border-radius: 0;
-  }
-
-  /* Square image on the left */
-  .card .thumb { flex: 0 0 auto; width: 14rem; align-self: flex-start; }
-  .card .thumb img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    display: block;
-    border-radius: 0;
-    background: rgba(0, 0, 0, .12);
-  }
-
-  .card-body { display: flex; flex-direction: column; gap: .5rem; flex: 1; min-width: 0; }
-  .card h3 { margin: 0; font-size: 1.15rem; }
-  .kind { margin: 0; font-size: .85rem; color: var(--ink); opacity: .75; }
-  .outcome { margin: 0; text-align: left; }
-
-  .tags { list-style: none; padding: 0; margin: auto 0 0; display: flex; flex-wrap: wrap; gap: .35rem; }
-  .tags li {
-    font-size: .78rem;
-    font-weight: 700;
-    padding: .15em .65em;
-    border: 1px solid var(--ink);
-    border-radius: 1em;
-    color: var(--ink);
-  }
-  .card a.more { color: var(--ink); font-weight: 700; text-decoration: underline; align-self: flex-end; }
-  .card a.more:hover { text-decoration-thickness: 3px; }
-  .card a:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
-
-  /* Narrow screens: the text column gets too tall to sit beside the image,
-     so the image goes on top, still a square, with even spacing at the top and left */
-  @media (max-width: 44rem) {
-    .card { flex-direction: column; gap: 1rem; }
-    .card .thumb { width: min(100%, 14rem); }
-    .card h3 { font-size: 1.05rem; }
-  }
+  
 </style>
 </head>
 <body>
@@ -101,10 +26,7 @@
   <ul class="grid">
 
     <!-- GMSpazio -->
-    <li class="card">
-      <a class="thumb" href="case-studies/gmspazio.html" tabindex="-1" aria-hidden="true">
-        <img src="images/gmspazio_srl_logo.jpeg" alt="GMSpazio logo">
-      </a>
+    <li class="card" >
       <div class="card-body">
         <h3>Shield Master: UI Redesign</h3>
         <p class="kind">SD Intern @ GMSpazio</p>
@@ -115,12 +37,10 @@
         <a class="more" href="case-studies/gmspazio.html">Read more: When in Rome</a>
       </div>
     </li>
+    
 
     <!-- Shadow Lab -->
     <li class="card">
-      <a class="thumb" href="case-studies/shadow-lab.html" tabindex="-1" aria-hidden="true">
-        <img src="images/shadow-lab-thumbnail.jpg" alt="Title screen of Shadow Lab">
-      </a>
       <div class="card-body">
         <h3>Shadow Lab</h3>
         <p class="kind">Capstone Project</p>
@@ -134,9 +54,6 @@
 
     <!--Instagram Clone -->
     <li class="card">
-      <a class="thumb" href="case-studies/ig-clone.html" tabindex="-1" aria-hidden="true">
-        <img src="images/eecs485logo.png" alt="EECS 485 Web Systems course logo">
-      </a>
       <div class="card-body">
         <h3>Instagram Clone</h3>
         <p class="kind">Web Systems Coursework</p>
@@ -150,9 +67,6 @@
 
     <!-- Google Search Clone -->
     <li class="card">
-      <a class="thumb" href="case-studies/gs-clone.html" tabindex="-1" aria-hidden="true">
-        <img src="images/eecs485logo.png" alt="EECS 485 Web Systems course logo">
-      </a>
       <div class="card-body">
         <h3>Google Search Clone</h3>
         <p class="kind">Web Systems Coursework</p>
@@ -166,9 +80,6 @@
 
     <!-- MapReduce Framework -->
     <li class="card">
-      <a class="thumb" href="case-studies/mapreduce.html" tabindex="-1" aria-hidden="true">
-        <img src="images/eecs485logo.png" alt="EECS 485 Web Systems course logo">
-      </a>
       <div class="card-body">
         <h3>MapReduce Framework</h3>
         <p class="kind">Web Systems Coursework</p>
@@ -182,9 +93,6 @@
 
     <!-- Image Classifier -->
     <li class="card">
-      <a class="thumb" href="case-studies/image-classifier.html" tabindex="-1" aria-hidden="true">
-        <img src="images/ml_logo.png" alt="Machine learning course logo">
-      </a>
       <div class="card-body">
         <h3>CNN Image Classifier</h3>
         <p class="kind">Machine Learning Coursework</p>
@@ -198,9 +106,6 @@
 
     <!-- ICU Binary Classifier -->
     <li class="card">
-      <a class="thumb" href="case-studies/icu-classifier.html" tabindex="-1" aria-hidden="true">
-        <img src="images/ml_logo.png" alt="Machine learning course logo">
-      </a>
       <div class="card-body">
         <h3>ICU Patient Mortality Classifier</h3>
         <p class="kind">Machine Learning Coursework</p>
@@ -214,9 +119,6 @@
 
     <!-- Metroid -->
     <li class="card">
-      <a class="thumb" href="case-studies/metroid.html" tabindex="-1" aria-hidden="true">
-        <img src="images/metroid.jpg" alt="Screenshot of the Metroid reimplementation">
-      </a>
       <div class="card-body">
         <h3>Metroid NES Reimplementation</h3>
         <p class="kind">Game Dev Coursework</p>
@@ -230,9 +132,6 @@
 
     <!-- Bride of Karsaz -->
     <li class="card">
-      <a class="thumb" href="case-studies/karsaz-bride.html" tabindex="-1" aria-hidden="true">
-        <img src="images/karsaz.jpg" alt="Screenshot of Bride of Karsaz">
-      </a>
       <div class="card-body">
         <h3>Bride of Karsaz</h3>
         <p class="kind">Original Game Prototype</p>
