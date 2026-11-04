@@ -3,7 +3,7 @@
    Load this first, then the page-specific file. */
  
 :root {
-  --bg: #fff600;          /* cadmium yellow page background */
+  --bg: #ffffe4;          /* off-white page background */
   --text: #000000;        /* main text */
   --muted: #262626;       /* secondary text (summaries, captions) */
   --line: #000000;        /* borders and rules */
