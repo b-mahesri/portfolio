@@ -8,74 +8,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --bg: #b9bfc3;          /* grey from the Metroid cover */
-    --text: #f83800;        /* Metroid red */
-    --muted: #f83800;
-    --line: #f83800;        /* borders and rules */
-    --accent: #f83800;      /* links */
-  }
-  body {
-    margin: 0;
-    padding: 2rem 1.25rem 4rem;
-    background: var(--bg);
-    color: var(--text);
-    font-family: "Jost", "Futura", system-ui, -apple-system, "Segoe UI", sans-serif;
-    line-height: 1.6;
-  }
-  main { max-width: 46rem; margin: 0 auto; }
-  a { color: var(--accent); }
-  a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-
-  .back { display: inline-block; margin-bottom: 1.5rem; font-size: .95rem; }
-  h1 {
-    font-family: "Press Start 2P", "Courier New", monospace;
-    font-size: 1.35rem;
-    font-weight: 400;
-    margin: 0 0 .75rem;
-    line-height: 1.5;
-  }
-  .summary { color: var(--muted); font-size: 1.1rem; margin: 0 0 1.5rem; }
-
-  h2 { font-size: 1.35rem; margin: 2.5rem 0 .5rem; }
-  h3 { font-size: 1.05rem; margin: 1.5rem 0 .25rem; }
-  p { margin: 0 0 1rem; }
-  ul.points { padding-left: 1.2rem; margin: 0 0 1rem; }
-  ul.points li { margin-bottom: .35rem; }
-
-  figure { margin: 1.5rem 0; }
-  figure img, figure video {
-    width: 100%;
-    height: auto;
-    display: block;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    background: rgba(0, 0, 0, .12);
-  }
-  figcaption { font-size: .9rem; color: var(--muted); margin-top: .4rem; }
-
-  /* Play button: the only rule added to the shared styles */
-  .button {
-    display: block;
-    width: fit-content;
-    margin: 0 auto 1rem;          /* centres the button */
-    padding: .9em 1.4em;
-    background: #f83800;          /* Metroid red fill */
-    color: #b9bfc3;               /* grey text */
-    border: 3px solid #f83800;
-    font-family: "Press Start 2P", "Courier New", monospace;
-    font-size: .85rem;
-    line-height: 1.4;
-    text-align: center;
-    text-decoration: none;
-  }
-  .button:hover { text-decoration: underline; }
-
-  .note { color: var(--muted); font-size: .9rem; }
-</style>
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/case-study.css">
 </head>
-<body>
+  
+<body style="--bg:#b9bfc3; --text:#f83800; --muted:#f83800; --line:#f83800; --accent:#f83800; --title-font:'Press Start 2P', monospace; --title-size:1.35rem; --title-weight:400;">
 <main>
 
   <a class="back" href="project-grid.html">Back to all projects</a>
@@ -86,8 +23,8 @@
   </p>
 
   <figure>
-    <video controls preload="metadata" poster="images/metroid.jpg">
-      <source src="videos/metroid-reimplementation.mp4" type="video/mp4">
+    <video controls preload="metadata" poster="../images/metroid.jpg">
+      <source src="../videos/metroid-reimplementation.mp4" type="video/mp4">
       Your browser can't play this video. <a href="videos/metroid-reimplementation.mp4">Download it instead</a>.
     </video>
     <figcaption>[Caption for reimplementation video]</figcaption>
@@ -108,8 +45,8 @@
   <p>[Add content]</p>
 
   <figure>
-    <video controls preload="metadata" poster="images/metroid-custom-level.jpg">
-      <source src="videos/metroid-custom-level.mp4" type="video/mp4">
+    <video controls preload="metadata" poster="../images/metroid-custom-level.jpg">
+      <source src="../videos/metroid-custom-level.mp4" type="video/mp4">
       Your browser can't play this video. <a href="videos/metroid-custom-level.mp4">Download it instead</a>.
     </video>
     <figcaption>[Caption for custom level video]</figcaption>
