@@ -1,0 +1,30 @@
+/* base.css
+   Shared by every page (project grid and case studies).
+   Load this first, then the page-specific file. */
+ 
+:root {
+  --bg: #fff600;          /* cadmium yellow page background */
+  --text: #000000;        /* main text */
+  --muted: #262626;       /* secondary text (summaries, captions) */
+  --line: #000000;        /* borders and rules */
+  --accent: #000000;      /* links */
+}
+ 
+body {
+  margin: 0;
+  padding: 2rem 1.25rem 4rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Jost", "Futura", system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+ 
+main { margin: 0 auto; }   /* max-width is set by each page type's own file */
+ 
+p { margin: 0 0 1rem; }
+ 
+a { color: var(--accent); }
+a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
