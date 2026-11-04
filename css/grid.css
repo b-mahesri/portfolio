@@ -1,0 +1,87 @@
+/* grid.css
+   Project grid page only. Load after base.css.
+ 
+   Each card can be restyled from its own HTML with these variables:
+     --card-border       border colour
+     --card-fill         background colour
+     --card-text         text colour (title, description, stack, link)
+     --card-title-font   font for the project name
+     --card-title-size   (optional) size of the project name
+   Example:
+     <li class="card" style="--card-fill:#b9bfc3; --card-text:#f83800;">
+   Anything you leave out falls back to the defaults below. */
+ 
+main { max-width: 52rem; }
+ 
+h1 { font-size: 1.9rem; margin: 0 0 .25rem; line-height: 1.2; }
+.pitch { color: var(--muted); margin: 0 0 1.5rem; max-width: 40rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .25rem; }
+.note { color: var(--muted); font-size: .9rem; margin: 0 0 1.25rem; max-width: 42rem; }
+ 
+/* One card per row */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ 
+.card {
+  /* Defaults, override per card with an inline style */
+  --card-border: var(--text);
+  --card-fill: var(--bg);
+  --card-text: var(--text);
+  --card-title-font: inherit;
+  --card-title-size: 1.15rem;
+ 
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1.25rem;
+  text-align: center;
+  background: var(--card-fill);
+  color: var(--card-text);
+  border: 2px solid var(--card-border);
+  border-radius: 0;
+}
+ 
+.card h3 {
+  margin: 0;
+  font-family: var(--card-title-font);
+  font-size: var(--card-title-size);
+  line-height: 1.4;
+}
+.card .kind { margin: 0; font-size: .85rem; opacity: .75; }
+.card .outcome { margin: 0; }
+ 
+/* Stack: bold outlined labels, centred */
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: .25rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .35rem;
+}
+.tags li {
+  font-size: .78rem;
+  font-weight: 700;
+  padding: .15em .65em;
+  border: 1px solid currentColor;
+  border-radius: 1em;
+}
+ 
+/* Read more link: bottom right */
+.card a.more {
+  align-self: flex-end;
+  margin-top: auto;
+  padding-top: .5rem;
+  color: var(--card-text);
+  font-weight: 700;
+  text-decoration: underline;
+}
+.card a.more:hover { text-decoration-thickness: 3px; }
+.card a:focus-visible { outline: 3px solid currentColor; outline-offset: 2px; }
