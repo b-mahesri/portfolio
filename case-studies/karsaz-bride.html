@@ -86,34 +86,42 @@
   <ul class="points">
     <li>
       <strong>Goldspike Feature: The Honk Mechanic</strong>
-      TODO
+      The player can honk at nearby vehicles to make them move out of the way:
+      <ul>
+        <li>Moving vehicles move left or right</li>
+        <li>Parked vehicles move forwards</li>
+        <li>Wrong-way vehicles slow down</li>
+      </ul>
+      Honking only works if you are close enough for other drivers to 'hear' it.
+      This was intended to challenge the driver to control their speed and still run fast enough. 
+      Collisions will slow you down but if you're too cautious and safe you'll never get through.
     </li>
     <li>
       <strong>The Bride: </strong>
-      TODO
+      Once encountered, the bride pursues you relentlessly and contact with her is deadly. 
+      You can't see the bride behind you, but her glow warns you when she's getting too close. 
+      Not being able to see her was intended to feed the uncertainty and anxiety of the player.
     </li>
     <li>
       <strong>Player Guidance: </strong>
-      TODO
-    </li>
-    <li>
-      <strong>What's the word for lighting and music and stuff?: </strong>
-      TODO
+      My approach was simply to start the game with text guidance for the controls and the story. 
+      I chose this because both the controls and the story were very simple and required very little text to communicate effectively, 
+      so there wasn't much of a risk of overwhelming or confusing the player.
     </li>
   </ul>
 
   <h3>Iteration: Week 1 to Week 2</h3>
   <ul class="points">
-    <li><strong>Improvement 1:</strong> todo</li>
-    <li><strong>Improvement 2:</strong> todo</li>
-    <li><strong>Improvement 3:</strong> todo</li>
+    <li><strong>Bike Controls:</strong> Polished controls by programming the bike to re-orient itself after a collison.</li>
+    <li><strong>Bride Pathfinding:</strong> Rebuilt the bride with Unity's NavMesh to AI pathfinding, enabling her to pursue the player through traffic.</li>
+    <li><strong>Mise en Scène:</strong> Added lighting, sound and story to build mood, tension and immersion.</li>
   </ul>
 
   <h3>Implementation Details</h3>
   <ul class="points">
-    <li><strong>Detail 1:</strong> todo</li>
-    <li><strong>Detail 2:</strong> todo</li>
-    <li><strong>Detail 3:</strong> todo</li>
+    <li><strong>Detail 1:</strong> PubSub design pattern with an EventBus</li>
+    <li><strong>Detail 2:</strong> DRY (Do Not Repeat Yourself) Codebase</li>
+    <li><strong>Detail 3:</strong> Toast Management for in-game guidance</li>
   </ul>
   
   <h2>Results</h2>
@@ -121,17 +129,29 @@
     <li>
       Final Grade: 96% A
     </li>
-    <li>
-      Feedback:
-    </li>
+
     <figure>
-    <video controls preload="metadata" poster="../images/karsaz.jpg">
-      <source src="../videos/karsaz-compare.mp4" type="video/mp4">
-      Your browser can't play this video. <a href="../videos/karsaz-compare.mp4">Download it instead</a>.
-    </video>
-    <figcaption>Week 1: Goldspike vs Week 2: Gold</figcaption>
-  </figure>
+      <video controls preload="metadata" poster="../images/karsaz.jpg">
+        <source src="../videos/karsaz-compare.mp4" type="video/mp4">
+        Your browser can't play this video. <a href="../videos/karsaz-compare.mp4">Download it instead</a>.
+      </video>
+      <figcaption>Week 1: Goldspike vs Week 2: Gold</figcaption>
+    </figure>
+    
   </ul>
+
+  <h2>Reflection</h2>
+  <ul class="points">
+    <li>
+      Bride Speed: I would make her faster or spawn close to the player several times. 
+      In the current version she can be slow, and can fall far enough behind to defeat the urgency of the game.
+    </li>
+    <li>
+      Collison Damage: I wasn't able to complete collision damage, so the bike can get away with colliding into traffic. 
+      A complete damage mechanism and UI would force the player to balance dodging traffic with maintaining enough speed to outpace the bride.
+    </li>
+  </ul>
+  
 
   <p class="note">
     Source code is private under the University of Michigan honour code. 
