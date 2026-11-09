@@ -18,9 +18,8 @@
 
   <h1>The Bride of Karsaz</h1>
   <p class="summary">
-    Rapid Prototype of an original game concept, 
-    combining the experience of driving in Karachi, Pakistan with 
-    an urban legend.
+    Rapid Prototype of an original horror driving game where you honk 
+    your way through Karachi traffic to outrun a ghost bride.
   </p>
 
   <dl class="facts">
@@ -105,9 +104,9 @@
     </li>
     <li>
       <strong>Player Guidance and Storytelling</strong><br>
-      The game open with a short set of text that explains the controls and introduces the story. 
+      The game open with a tutorial and story scene. 
       As both the controls and the story are very simple, 
-      I knew a small amount of text would be okay to use and would not overwhelmn the player.
+      I knew a small amount of text would be okay to use and would not overwhelm the player.
       <br>
       I implemented this with a toast management system for the messages, events to trigger them, 
       and coroutines for the story animations.
@@ -132,7 +131,28 @@
   </ul>
   
   <h2>Results</h2>
+  
   <h3>Instructor and Peer Feedback:</h3>
+  <ul class="points">
+    <li>
+      <strong>Strengths</strong><br>
+      <ul>
+        <li>The honk mechanic is novel.</li>
+        <li>The game is well themed and intuitive.</li>
+        <li>It's fun and funny.</li>
+        <li>It offers interesting decisions and explores its concept well.</li>
+      </ul>
+    </li>
+
+    <li>
+      <strong>Suggested Improvements</strong><br>
+      <ul>
+        <li>Refine the placement of other vehicles and level progression.</li>
+        <li>Enable players to skip the tutorial.</li>
+      </ul>
+    </li>
+  </ul>
+  
   <h3>Playthrough:</h3>
   <figure>
     <video controls preload="metadata" poster="../images/karsaz.jpg">
@@ -145,12 +165,17 @@
   <h2>Reflection</h2>
   <ul class="points">
     <li>
-      <strong>Bride Speed:</strong> I would make her faster or spawn close to the player several times. 
-      In the current version she can be slow, and can fall far enough behind to defeat the urgency of the game.
+      <strong>Bride Speed:</strong> 
+      For some players, the bride can be slow and fall too far behind, removing some of the urgency. 
+      I would make her faster, create more levels of difficulty, or have her spawn near the player 
+      several times during the game, to create more balance.
     </li>
     <li>
-      <strong>Collision Damage:</strong> I wasn't able to complete collision damage, so the bike can get away with colliding into traffic. 
-      A complete damage mechanism and UI would force the player to balance dodging traffic with maintaining enough speed to outpace the bride.
+      <strong>Collision Damage:</strong> 
+      I started implementing collision damage but didn't complete it in time. 
+      When the bike crashes into other vehicles, it slows down but suffers no further damage. 
+      Completing the damage system and an accompanying UI would raise the stakes even further, 
+      making the game more challenging and intense.
     </li>
   </ul>
   
