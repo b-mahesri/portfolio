@@ -90,21 +90,24 @@
       </ul>
       Other drivers only react if you're close enough for them to 'hear' you. 
       I intended this to create a persistent challenge for the player; 
-      collisions will slow you down, but being too cautious is equally dangerous.
-      <br><br>
+      collisions will slow you down, but being too cautious is equally dangerous.<br>
       The prototype has 5 sections, each a different combination of the 3 vehicle types.
     </li>
     <li>
       <strong>The Bride</strong><br>
-      Once encountered, the bride pursues you relentlessly and contact with her is deadly. 
-      You can't see the bride behind you, but her glow warns you when she's getting too close. 
-      Not being able to see her was intended to feed the uncertainty and anxiety of the player.
+      Once you encounter her, the bride chases you. If she catches you, it's game over. 
+      I implemented her using Unity's NavMesh for AI pathfinding, 
+      enabling her to follow the player's bike through traffic.
+      <br>
+      The camera follows the player, which means you can't see the bride behind you. 
+      But I designed her with her own lightsource, that glows to warn you as she gets closer. 
+      I intended these decisions to create an urgency and anxiety in the gameplay.
     </li>
     <li>
-      <strong>Player Guidance</strong><br>
+      <strong>Player Guidance and Story Telling</strong><br>
       My approach was simply to start the game with text guidance for the controls and the story. 
       I chose this because both the controls and the story were very simple and required very little text to communicate effectively, 
-      so there wasn't much of a risk of overwhelming or confusing the player.
+      so there wasn't much of a risk of overwhelming or confusing the player. I implemented this with a toast management system, events and co-routines to create the animations.
     </li>
   </ul>
 
