@@ -116,9 +116,19 @@
 
   <h3>Iteration: Gold Spike to Gold</h3>
   <ul class="points">
-    <li><strong>Bike Controls:</strong> Polished controls by programming the bike to re-orient itself after a collision.</li>
-    <li><strong>Bride Pathfinding:</strong> Rebuilt the bride with Unity's NavMesh for AI pathfinding, enabling her to pursue the player through traffic.</li>
-    <li><strong>Mise en Scène/ Juice:</strong> Added lighting, sound and story to build mood, tension and immersion.</li>
+    <li><strong>Bike Controls:</strong> After a collision, 
+      the bike could get stuck facing the wrong way, with no way for the player to recover. 
+      I changed the physics so the bike always realigns with the road after a collision.
+    </li>
+    <li><strong>Bride Pathfinding:</strong> The Gold Spike focused on the honk mechanic, 
+      so the bride implementation was a placeholder: a fixed object that spawned at fixed points. 
+      I replaced her with a bride built on Unity’s NavMesh, who chases the player through traffic. 
+      Much cooler.
+    </li>
+    <li><strong>Mise en Scène a.k.a. 'Juice':</strong> The Gold Spike had no lighting, sound, 
+      or set decoration, so it didn’t feel scary or like Karachi. 
+      I added lighting, sound, and story to build the mood and the tension.
+    </li>
   </ul>
   
   <h2>Results</h2>
@@ -144,14 +154,8 @@
     </li>
   </ul>
   
-
   <p class="note">
     Source code is private under the University of Michigan honour code. 
-  </p>
-
-  <p class="note">
-    Note:<br>
-    Incase you want to add anything later.
   </p>
 
   <nav class="next" aria-label="Project navigation">
