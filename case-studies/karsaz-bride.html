@@ -104,24 +104,21 @@
       I intended these decisions to create an urgency and anxiety in the gameplay.
     </li>
     <li>
-      <strong>Player Guidance and Story Telling</strong><br>
-      My approach was simply to start the game with text guidance for the controls and the story. 
-      I chose this because both the controls and the story were very simple and required very little text to communicate effectively, 
-      so there wasn't much of a risk of overwhelming or confusing the player. I implemented this with a toast management system, events and co-routines to create the animations.
+      <strong>Player Guidance and Storytelling</strong><br>
+      The game open with a short set of text that explains the controls and introduces the story. 
+      As both the controls and the story are very simple, 
+      I knew a small amount of text would be okay to use and would not overwhelmn the player.
+      <br>
+      I implemented this with a toast management system for the messages, events to trigger them, 
+      and coroutines for the story animations.
     </li>
   </ul>
 
-  <h3>Iteration from Gold Spike to Gold</h3>
+  <h3>Iteration: Gold Spike to Gold</h3>
   <ul class="points">
     <li><strong>Bike Controls:</strong> Polished controls by programming the bike to re-orient itself after a collision.</li>
     <li><strong>Bride Pathfinding:</strong> Rebuilt the bride with Unity's NavMesh for AI pathfinding, enabling her to pursue the player through traffic.</li>
     <li><strong>Mise en Scène/ Juice:</strong> Added lighting, sound and story to build mood, tension and immersion.</li>
-  </ul>
-
-  <h3>Implementation Details</h3>
-  <ul class="points">
-    <li><strong>EventBus(PubSub Design Pattern):</strong> TODO</li>
-    <li><strong>DRY (Do Not Repeat Yourself) Code:</strong> TODO</li>
   </ul>
   
   <h2>Results</h2>
