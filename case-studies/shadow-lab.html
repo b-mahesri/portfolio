@@ -108,18 +108,53 @@
   
 
   <h2>Design and Process</h2>
+  <h3>Gold Spike: Spatial Audio</h3>
+    <p>
+        Spatial audio requires the player to find helpful equipment, detect clues, detect danger and problem solve through out their escape.
+        We built it with Unity’s audio spatialization tools and the Steam Audio toolkit.
+    </p>
+
+  <h3>Level Design</h3>
+    <p>
+        <ul>
+            <li>
+                <strong>Level 1: </strong> The player escapes their cell after a power outage and sees that all their fellow test subjects are missing.  
+                They hear the power running in only one lab room and go into it and discover a sound filtering helmet, and use it to escape the level 
+                as it self destructs.
+            </li>
+            <li>
+                <strong>Level 2: </strong> The player finds themselves in a dishevelled office space patrolled by armed guards. 
+                They have to hide from the guards while looking for clues on how to escape without being captured.
+            </li>
+        </ul>
+    </p>
+
+    <h3>Playtesting</h3>
+    <p>
+        Every week, 10 to 20 peers played the game, instructors played and graded it, and friends tried it too. 
+        We prepared questions in advance and watched how players behaved at specific moments to see whether our guidance worked.
+    </p>
   
-  <h3>Technical Decisions</h3>
-  <ul class="points">
-    <li>
-      <strong>Decision 1</strong>
-      TODO
-    </li>
-    <li>
-      <strong>Decision 2</strong>
-      TODO
-    </li>
-  </ul>
+  <h3>Iteration: How Feedback Informed Design</h3>
+    <ul class="points">
+        <li><strong>Maze to Story: </strong>A grading session pointed out that a plain maze could be reduced to brute-force navigation, not spatial audio. 
+            So we built a story to shape the space instead: a Soviet research lab where the player is a research subject. 
+            The lab has been attacked, everyone has vanished, and the power is out. 
+            The player must find a sound-filtering device to escape, solving problems, dodging enemies, and learning the facility’s secrets.
+        </li>
+        <li><strong>Cutting redundant mechanics: </strong>
+            In Week 2, with the story and guidance still undefined, we gave the player a gun, and the game turned into a first-person shooter. 
+            Feedback helped us see this, so we removed it and doubled down on audio and puzzles. 
+            From then on, we only added features that supported spatial audio.
+            Our levels were dark so sound would be the focus, so we added an echolocation beam that made important objects glow. 
+            Players spammed it and stopped listening. 
+            We realized we’d built it to cover for weak guidance, so we removed it, brightened both levels, and worked on guiding players through audio.
+        </li>
+        <li><strong>Interactables and lock-and-key problems: </strong> Office hours pointed us to Wisp, a previous 494 horror game, as a model for guidance. 
+            Interactable objects let us build the world, add story details, and give clues through objects. 
+            We structured the game as a series of lock-and-key problems, where the player is trapped and has to interact with and listen to the environment to find the way out.
+        </li>
+    </ul>
 
   <figure>
     <img src="../images/shadow-lab-sketch.png" alt="e.g. Plan for level design">
@@ -127,21 +162,6 @@
       TODO e.g. Plan for level design
     </figcaption>
   </figure>
-
-  <h3>Implementation Details</h3>
-  <ul class="points">
-    <li>TODO</li>
-  </ul>
-  
-  <h3>Iterative Development and Feedback</h3>
-  <p>
-    TODO
-  </p>
-
-  <p class="note">
-    If there's something silly you want to add<br>
-    You can
-  </p>
 
   <h2>Results</h2>
   <ul class="points">
